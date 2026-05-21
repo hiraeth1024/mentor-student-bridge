@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600">
+  <rect width="1600" height="1600" rx="260" fill="#ffffff"/>
+  <rect x="90" y="90" width="1420" height="1420" rx="230" fill="#f6fbfd" stroke="#d7e5ec" stroke-width="18"/>
+  <g transform="translate(255 250)">
+    <path d="M180 790 C310 610 455 535 545 535 C635 535 780 610 910 790" fill="none" stroke="#073f57" stroke-width="82" stroke-linecap="round"/>
+    <path d="M222 790 C345 650 463 595 545 595 C627 595 745 650 868 790" fill="none" stroke="#2f85ee" stroke-width="44" stroke-linecap="round"/>
+    <circle cx="175" cy="790" r="92" fill="#ffffff" stroke="#073f57" stroke-width="46"/>
+    <circle cx="915" cy="790" r="92" fill="#ffffff" stroke="#073f57" stroke-width="46"/>
+    <circle cx="545" cy="535" r="92" fill="#ffffff" stroke="#2f85ee" stroke-width="46"/>
+    <path d="M545 210 L760 325 L760 570 L545 690 L330 570 L330 325 Z" fill="#ffffff" stroke="#0b6f8f" stroke-width="42" stroke-linejoin="round"/>
+    <path d="M545 288 L690 365 L690 532 L545 612 L400 532 L400 365 Z" fill="#e9f5fa" stroke="#2f85ee" stroke-width="24" stroke-linejoin="round"/>
+    <path d="M545 300 V600 M405 380 L685 380 M405 510 L685 510" stroke="#0b6f8f" stroke-width="26" stroke-linecap="round"/>
+    <path d="M303 325 H195 Q150 325 150 370 V515" fill="none" stroke="#b6a04b" stroke-width="30" stroke-linecap="round"/>
+    <path d="M787 325 H895 Q940 325 940 370 V515" fill="none" stroke="#b6a04b" stroke-width="30" stroke-linecap="round"/>
+    <circle cx="150" cy="565" r="30" fill="#b6a04b"/>
+    <circle cx="940" cy="565" r="30" fill="#b6a04b"/>
+    <rect x="96" y="105" width="112" height="112" rx="28" fill="#ef3f3f"/>
+  </g>
+  <g font-family="Hiragino Sans GB, STHeiti, PingFang SC, Microsoft YaHei, Arial, sans-serif" text-anchor="middle">
+    <text x="800" y="1265" fill="#18323f" font-size="136" font-weight="800">导师双选系统</text>
+    <text x="800" y="1365" fill="#0b6f8f" font-size="54" font-weight="600" letter-spacing="4">MENTOR-STUDENT BRIDGE</text>
+  </g>
+</svg>

@@ -15,6 +15,7 @@ import { Route as MentorRouteImport } from './routes/mentor'
 import { Route as HelpRouteImport } from './routes/help'
 import { Route as FeedbackRouteImport } from './routes/feedback'
 import { Route as CoverRouteImport } from './routes/cover'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as StudentIndexRouteImport } from './routes/student.index'
 import { Route as MentorIndexRouteImport } from './routes/mentor.index'
@@ -57,6 +58,11 @@ const FeedbackRoute = FeedbackRouteImport.update({
 const CoverRoute = CoverRouteImport.update({
   id: '/cover',
   path: '/cover',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -127,6 +133,7 @@ const MentorCreateInfoRoute = MentorCreateInfoRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/cover': typeof CoverRoute
   '/feedback': typeof FeedbackRoute
   '/help': typeof HelpRoute
@@ -148,6 +155,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/cover': typeof CoverRoute
   '/feedback': typeof FeedbackRoute
   '/help': typeof HelpRoute
@@ -166,6 +174,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/cover': typeof CoverRoute
   '/feedback': typeof FeedbackRoute
   '/help': typeof HelpRoute
@@ -189,6 +198,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/auth'
     | '/cover'
     | '/feedback'
     | '/help'
@@ -210,6 +220,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/auth'
     | '/cover'
     | '/feedback'
     | '/help'
@@ -227,6 +238,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/auth'
     | '/cover'
     | '/feedback'
     | '/help'
@@ -249,6 +261,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthRoute: typeof AuthRoute
   CoverRoute: typeof CoverRoute
   FeedbackRoute: typeof FeedbackRoute
   HelpRoute: typeof HelpRoute
@@ -299,6 +312,13 @@ declare module '@tanstack/react-router' {
       path: '/cover'
       fullPath: '/cover'
       preLoaderRoute: typeof CoverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -459,6 +479,7 @@ const StudentRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthRoute: AuthRoute,
   CoverRoute: CoverRoute,
   FeedbackRoute: FeedbackRoute,
   HelpRoute: HelpRoute,

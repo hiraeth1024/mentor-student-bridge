@@ -1,4 +1,4 @@
-# mentor-student-bridge 规范
+# mentor-student-bridge 前端规范
 
 ## 项目概览
 
@@ -93,7 +93,7 @@ PATH=/Users/hybuzhy/.nvm/versions/node/v22.17.1/bin:$PATH bun run build
 <claude-mem-context>
 # Memory Context
 
-# [mentor-student-bridge] recent context, 2026-05-17 5:02pm GMT+8
+# [mentor-student-bridge] recent context, 2026-05-21 9:52pm GMT+8
 
 No previous sessions found.
 </claude-mem-context>
